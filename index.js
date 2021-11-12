@@ -38,6 +38,7 @@ app.get("/", function (req, res) {
 
   SwaggerClient.http(request).then(
     (r) => {
+      console.log('Incoming request', new Date().toLocaleString());
       console.log(r);
       res.send('OK');
     },
